@@ -11,6 +11,8 @@ import ServiceCategory from '~/Pages/ServiceCategory';
 import Booking from '~/Pages/Booking';
 import Producer from '~/Pages/Producer';
 import Product from '~/Pages/Product';
+import ModalAddProduct from '~/components/feature/ModalProduct';
+import { ModalEdit } from '~/components/feature/ModalProduct';
 import Category from '~/Pages/Category';
 import Order from '~/Pages/Order';
 import ProductOrder from '~/Pages/ProductOrder';
@@ -39,6 +41,8 @@ const publicRoutes = [
     { path: config.routes.booking, name: 'Booking', element: Booking },
     { path: config.routes.producer, name: 'Producer', element: Producer },
     { path: config.routes.product, name: 'Product', element: Product },
+    { path: config.routes.addProduct, name: 'AddProduct', element: ModalAddProduct },
+    { path: config.routes.editProduct, name: 'EditProduct', element: ModalEdit },
     { path: config.routes.categoryProduct, name: 'Category', element: Category },
     { path: config.routes.order, name: 'Order', element: Order },
     { path: config.routes.productOrder, name: 'ProductOrder', element: ProductOrder },

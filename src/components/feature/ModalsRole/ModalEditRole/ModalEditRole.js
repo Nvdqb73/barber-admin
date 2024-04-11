@@ -16,30 +16,31 @@ function ModalEditRole() {
     const [roleId, setRoleId] = useState('');
     const [roleName, setRoleName] = useState('');
     const location = useLocation();
-    const findId = location.state.role;
+    const findId = location.state.products;
 
     const navigate = useNavigate();
 
     useEffect(() => {
         if (findId !== undefined) {
-            setRoleId(findId.roleID);
-            setRoleName(findId.roleName);
+            // setRoleId(findId.roleID);
+            // setRoleName(findId.roleName);
+            console.log('findId', findId);
         } else {
             toast.error('Vui lòng chọn role khác!');
-            navigate('/account/role');
+            // navigate('/account/role');
         }
     }, [findId, navigate]);
 
     const handleEditRole = async () => {
-        const result = await RoleServices.updateRole(roleId, roleName);
-        if (result) {
-            setRoleId('');
-            setRoleName('');
-            toast.success('Chỉnh sửa role thành công!');
-            navigate('/account/role');
-        } else {
-            toast.error('Chỉnh sửa role thất bại!');
-        }
+        // const result = await RoleServices.updateRole(roleId, roleName);
+        // if (result) {
+        //     setRoleId('');
+        //     setRoleName('');
+        //     toast.success('Chỉnh sửa role thành công!');
+        //     navigate('/account/role');
+        // } else {
+        //     toast.error('Chỉnh sửa role thất bại!');
+        // }
     };
 
     return (

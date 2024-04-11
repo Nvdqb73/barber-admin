@@ -19,27 +19,25 @@ export const getProductById = async (id) => {
 };
 
 export const createProduct = async (
-    name,
-    image,
-    describe,
-    quantityLesson,
-    quantityStudent,
+    proName,
+    proImage,
     price,
-    typeCode,
-    instructorCode,
-    adminCode,
+    quantity,
+    proDescription,
+    producerID,
+    warehouseID,
+    cateID,
 ) => {
     try {
         const res = await httpRequest.post('Product', {
-            tenKH: name,
-            hinh: image,
-            moTa: describe,
-            soLuongBH: quantityLesson,
-            soLuongHocVien: quantityStudent,
-            gia: price,
-            maLoai: typeCode,
-            maGV: instructorCode,
-            maQTV: adminCode,
+            proName,
+            proImage,
+            price,
+            quantity,
+            proDescription,
+            producerID,
+            warehouseID,
+            cateID,
         });
         return res;
     } catch (error) {
@@ -48,28 +46,26 @@ export const createProduct = async (
 };
 
 export const updateProduct = async (
-    id,
-    name,
-    image,
-    describe,
-    quantityLesson,
-    quantityStudent,
+    proID,
+    proName,
+    proImage,
     price,
-    typeCode,
-    instructorCode,
-    adminCode,
+    quantity,
+    proDescription,
+    producerID,
+    warehouseID,
+    cateID,
 ) => {
     try {
-        const res = await httpRequest.put(`Product/${id}`, {
-            tenKH: name,
-            hinh: image,
-            moTa: describe,
-            soLuongBH: quantityLesson,
-            soLuongHocVien: quantityStudent,
-            gia: price,
-            maLoai: typeCode,
-            maGV: instructorCode,
-            maQTV: adminCode,
+        const res = await httpRequest.put(`Product/${proID}`, {
+            proName,
+            proImage,
+            price,
+            quantity,
+            proDescription,
+            producerID,
+            warehouseID,
+            cateID,
         });
         return res;
     } catch (error) {

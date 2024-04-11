@@ -1,4 +1,5 @@
 const account = '/account/role';
+const booking = '/booking/product';
 const routes = {
     //Not Found
     error404: '/404',
@@ -24,6 +25,8 @@ const routes = {
     booking: '/booking/bookings',
     producer: '/booking/producer',
     product: '/booking/product',
+    addProduct: `${booking}/addProduct`,
+    editProduct: `${booking}/editProduct`,
     categoryProduct: '/booking/category',
     order: '/booking/order',
     productOrder: '/booking/productOrder',
