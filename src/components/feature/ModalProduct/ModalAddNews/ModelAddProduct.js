@@ -40,7 +40,7 @@ function ModalAddProduct() {
             toast.success('Thêm product thàn công!');
             navigate('/booking/product');
         } else {
-            toast.success('Thêm product thất bại!');
+            toast.error('Thêm product thất bại!');
         }
     };
 
